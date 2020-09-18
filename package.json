@@ -1,0 +1,14 @@
+{
+    "name": "infinite.monkey.theorem",
+    "version": "1.0.0",
+    "description": "Genetic Algorithm applied to the Infinite Monkey Theorem",
+    "main": "./src/main.ts",
+    "scripts": {
+        "dev": "lite-server"
+    },
+    "author": "Leonardo Folgoni",
+    "license": "MIT",
+    "devDependencies": {
+        "lite-server": "^2.5.4"
+    }
+}
