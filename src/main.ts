@@ -4,7 +4,6 @@ import printPopulation from "./printPopulation.js";
 
 const POPULATION_SIZE: number = 100;
 const p = new Population(POPULATION_SIZE);
-const initialIndividual = p.population[0].INDIVIDUAL;
 
 let generationNumber = 0;
 
@@ -20,9 +19,4 @@ while (1) {
 }
 
 console.log("Simulation terminated, target reached");
-console.log(
-    "Fittest individual:",
-    p.population[0].INDIVIDUAL,
-    "started from",
-    initialIndividual
-);
+console.log("Fittest individual:", p.population[0].INDIVIDUAL);
