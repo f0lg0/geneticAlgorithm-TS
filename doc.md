@@ -44,7 +44,7 @@ Genetic Algorqthm in TS
 
 ```
 
-## The actual cod
+## The actual code
 
 ### Target
 
