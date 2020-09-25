@@ -1,1 +1,1 @@
-export const TARGET: string = "genetic algorithm";
+export const TARGET: string = "Genetic Algorithm";

@@ -1,34 +1,46 @@
 import { TARGET } from "./target.js";
-const KEYS = "abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+import { KEYS } from "./keys.js";
 
 class Individual {
     private dna: Array<string>;
     private fitness: number;
     private score: number;
 
-    constructor(size: number) {
-        this.dna = this.generateDNA(size);
+    constructor() {
+        this.dna = this.generateDNA();
         this.fitness = 0;
         this.score = 0;
 
-        this.calculateFitness(TARGET);
+        this.calculateFitness();
     }
 
-    generateDNA(size: number) {
+    generateDNA() {
         let result: Array<string> = [];
-        for (let i = 0; i < size; i++) {
+        for (let i = 0; i < TARGET.length; i++) {
             result.push(KEYS.charAt(Math.floor(Math.random() * KEYS.length)));
         }
 
         return result;
     }
 
-    calculateFitness(target: string) {
-        for (let i = 0; i < target.length; i++) {
-            if (this.dna[i] === target[i]) this.score++;
+    modifyDNA(newDNA: Array<string>) {
+        this.dna = newDNA;
+        return true;
+    }
+
+    modifySingleDNAGene(index: number, newGene: string) {
+        this.dna[index] = newGene;
+        return true;
+    }
+
+    calculateFitness() {
+        this.score = 0;
+
+        for (let i = 0; i < TARGET.length; i++) {
+            if (this.dna[i] === TARGET[i]) this.score++;
         }
 
-        this.fitness = this.score / target.length;
+        this.fitness = this.score / TARGET.length;
         return this.fitness;
     }
 
@@ -41,6 +53,7 @@ class Individual {
     }
 
     get FITNESS() {
+        this.calculateFitness();
         return this.fitness;
     }
 }
