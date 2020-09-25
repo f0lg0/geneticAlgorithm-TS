@@ -10,6 +10,8 @@ _The infinite monkey theorem states that a monkey hitting keys at random on a ty
 
 ## Documentation
 
+I STRONGLY RECCOMEND YOU TO CHECK OUT THE EXPLAINATION. Especially if you don't have experience with the concept of Genetic Algorithms.
+
 [HERE](https://github.com/f0lg0/geneticAlgorithm-TS/blob/master/doc.md)
 
 ## Requirements
